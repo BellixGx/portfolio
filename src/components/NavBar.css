@@ -1,0 +1,226 @@
+
+#about, #skills, #experience, #education, #projects, #contact {
+    margin-top: 5px; 
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF; 
+    color: #121111;
+    padding: 0 20px; 
+    height: 55px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.navbar.dark-theme {
+    background-color: #1F1F1F; 
+    color: #FFFFFF;
+}
+
+.nav-left .name {
+    font-size: 20px;
+    color: #262626; 
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+body.dark-theme .nav-left .name {
+    color: rgb(255, 245, 240); 
+}
+
+/* Navigation links styling (common for both mobile and desktop) */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link {
+    color: #5E5E5E; 
+    padding: 0 16px; 
+    text-decoration: none;
+    height: 100%; 
+    display: flex; 
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link svg{
+    margin-right: 10px;
+}
+
+body.dark-theme .nav-link {
+    color: #b1b1b1; 
+}
+
+.nav-link:hover {
+    background-color: #177DDC; /* Hover background in both themes */
+    color: #fff;
+    height: 100%;
+}
+
+body.dark-theme .nav-link:hover {
+    background-color: #177DDC; /* Hover background in dark theme */
+    color: #fff;
+}
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .nav-left .name {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .theme-toggle {
+        cursor: pointer;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        margin-right: 40px;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        margin-right: 28px; 
+        padding: 0; 
+        background: transparent;
+        border: none;
+        z-index: 1000; 
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: flex-start; /* Align links to the left */
+        justify-content: flex-start;
+        max-height: 100vh; /* Full height of the viewport */
+        overflow: hidden;
+        position: fixed; /* Fixed position to act as a sidebar */
+        top: 0; 
+        right: -50%; /* Start off-screen to the right */
+        width: 50%; /* Set width to approximately half the screen */
+        padding-top: 80px;
+        background-color: #FFFFFF;
+        transition: right 0.3s ease-out; 
+        z-index: 999; 
+    }
+
+    body.dark-theme .nav-links {
+        background-color: #1F1F1F; 
+    }
+
+    .nav-links.open {
+        left: 0; /* Slide in the menu from the right */
+    }
+
+    
+    .nav-link {
+        display: flex; /* Align items horizontally */
+        align-items: center; /* Vertically center the icon and text */
+        padding: 10px 10px; /* Reduce padding */
+        margin: 2px 0; /* Reduce margin between links */
+        color: #5E5E5E;
+        width: 100%; /* Ensure full width for the links */
+        text-decoration: none;
+        height: auto; /* Let height adjust based on content */
+        box-sizing: border-box; /* Ensure padding and borders are included in height */
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .nav-link svg {
+        margin-right: 8px; /* Space between icon and text */
+        width: 18px;
+        height: 18px;
+        vertical-align: middle; /* Ensure the icon is aligned with the text */
+    }
+    
+    /* Dark theme */
+    body.dark-theme .nav-link {
+        color: #b1b1b1;
+    }
+
+    .nav-icon {
+        margin-right: 8px; /* Reduce space between icon and text */
+    }
+
+    .nav-link:active,
+    .nav-link.active {
+        background-color: #177DDC; /* Blue background */
+        color: #fff; /* White text */
+        width: 100%;
+    }
+    
+    /* Hover styles for the links */
+    .nav-link:hover {
+        background-color: #177DDC; /* Hover background */
+        color: #fff;
+    }
+    
+    body.dark-theme .nav-link {
+        color: #b1b1b1; /* Dark theme text */
+    }
+    
+    body.dark-theme .nav-link:hover {
+        background-color: #177DDC;
+        color: #fff;
+    }
+    
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-left .menu-icon {
+        order: 1; /* Menu icon comes first */
+        margin-left: 15px; 
+    }
+
+    .nav-left .name {
+        order: 2;
+        margin-left: 90px; 
+    }
+}
+
+
+/* Desktop-specific styles */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Hide menu icon in desktop */
+    }
+
+    .theme-toggle {
+        margin-right: 60px !important;
+        color: #177DDC;
+    }
+}
+
+/* Theme toggle button styling */
+.theme-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #177DDC; /* Light theme */
+}
+
+body.dark-theme .theme-toggle {
+    color: #f0f0f0; /* Dark theme */
+}

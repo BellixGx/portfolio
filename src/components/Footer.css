@@ -1,0 +1,33 @@
+
+  
+  .footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Optional: Set max width */
+    margin: 0 auto; /* Center the footer */
+    padding: 0 20px; /* Horizontal padding */
+  }
+  
+  .footer-left {
+    color: #8d8e8f; /* Text color */
+  }
+  
+  .footer-right {
+    display: flex; /* Use flexbox for icons */
+    gap: 15px; /* Space between icons */
+  }
+  
+
+  .social-icon {
+    color: #007bff; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+    margin: 20px;
+  }
+  
+  .social-icon:hover {
+    color: #0056b3; /* Change color on hover */
+  }
+  

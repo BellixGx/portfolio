@@ -1,0 +1,74 @@
+/* General Body Styles */
+body {
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body {
+    background-color: #F0F2F5; 
+    color: #000000; 
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #131313;
+    color: #ffffff; 
+}
+
+/* Section Styles */
+.section {
+    padding-top: 60px;  
+    margin-top: -5px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #FFFFFF; 
+    color: #121111;
+    transition: background-color 0.3s;
+}
+
+.navbar.dark-theme {
+    background-color: #1F1F1F; 
+    color: #FFFFFF;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+    color: #5E5E5E; 
+}
+
+body.dark-theme .nav-link {
+    color: #b1b1b1; 
+}
+
+/* Button Styles */
+.contact-button {
+    background-color: #2D9AFE;
+    color: white;
+}
+
+.contact-button:hover {
+    background-color: #51B0FE;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Add any additional styles here for specific components, 
+   like your profile card, etc. with corresponding theme variations */
+
