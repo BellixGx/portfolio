@@ -148,7 +148,7 @@ const skillss = [
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const token = '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';
+        const token = process.env.PROJECTS_APP_API_KEY ;
         const response = await fetch('https://api.github.com/users/Bellix01/repos', {
           headers: {
             Authorization: `token ${token}`,
