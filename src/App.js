@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import './App.css';
 import './styles/sections.css';
 import profilLogo from './assets/ammine.jpg';
@@ -255,7 +256,7 @@ const skillss = [
     if (formIsValid) {
       // Perform submission logic, e.g., sending email or saving data
       // alert("Form submitted successfully!");
-      fetch('https://back-3-hauw.onrender.com/api/sendMessage', {
+      fetch('http://127.0.0.1:5000/api/sendMessage', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -458,7 +459,7 @@ const skillss = [
                   </div>
                   <div className="timeline-company-row">
                     <a href="http://fso.ump.ma/" className="timeline-company">
-                      <span className="company-icon"><img src={'http://fso.ump.ma/assets/logo.svg'} alt='fso logo' ></img></span> <span className="company-name">Faculty of Science</span>
+                      <span className="company-icon"><img src={"//external-content.duckduckgo.com/ip3/fso.ump.ma.ico"} alt='fso logo' ></img></span> <span className="company-name">Faculty of Science</span>
                     </a>
                   </div>
                   <div className="timeline-role-row">
@@ -520,7 +521,7 @@ const skillss = [
                       </div>
                       <div className="edu-timeline-school-row">
                         <a href="http://fso.ump.ma/" className="edu-timeline-school">
-                          <span className="school-icon"><img src="http://fso.ump.ma/assets/logo.svg" alt="FSO logo"></img></span>
+                          <span className="school-icon"><img src="//external-content.duckduckgo.com/ip3/fso.ump.ma.ico" alt="FSO logo"></img></span>
                           <span className="school-name">Faculty of Science</span>
                         </a>
                       </div>
