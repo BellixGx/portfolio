@@ -148,7 +148,7 @@ const skillss = [
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const token = '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';
+        const token = process.env.REACT_APP_API_KEY;
         const response = await fetch('https://api.github.com/users/Bellix01/repos', {
           headers: {
             Authorization: `token ${token}`,
@@ -245,9 +245,41 @@ const skillss = [
       formIsValid = false;
     }
 
+    const formData = {
+      name,
+      email,
+      subject,
+      message,
+    };
+
     if (formIsValid) {
       // Perform submission logic, e.g., sending email or saving data
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
+      fetch('http://127.0.0.1:5000/api/sendMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log('Success:', data); 
+          // Optionally reset form fields
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+        })
+        .catch((error) => {
+          console.error('Error:', error); // Handle error
+        });
+
     }
   };
     
