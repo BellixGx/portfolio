@@ -156,7 +156,7 @@ const skillss = [
           },
         });
         const reposData = await response.json();
-        console.log('Fetched repos:', reposData);
+        // console.log('Fetched repos:', reposData);
   
         // Fetch languages for each repository
         const reposWithLanguages = await Promise.all(
@@ -189,7 +189,7 @@ const skillss = [
         });
   
         uniqueLanguages = [...new Set(uniqueLanguages)]; 
-        console.log('Unique languages:', uniqueLanguages);
+        // console.log('Unique languages:', uniqueLanguages);
         setLanguages(uniqueLanguages);
       } catch (error) {
         console.error('Error fetching repos:', error);
@@ -256,7 +256,7 @@ const skillss = [
     if (formIsValid) {
       // Perform submission logic, e.g., sending email or saving data
       // alert("Form submitted successfully!");
-      fetch('http://127.0.0.1:5000/api/sendMessage', {
+      fetch('https://back-3-hauw.onrender.com/api/sendMessage', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -270,7 +270,7 @@ const skillss = [
           return response.json();
         })
         .then((data) => {
-          console.log('Success:', data); 
+          // console.log('Success:', data); 
           // Optionally reset form fields
           setName('');
           setEmail('');
