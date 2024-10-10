@@ -37,6 +37,10 @@ body.dark-theme .nav-left .name {
     color: rgb(255, 245, 240); 
 }
 
+.logo {
+    width: 200px;  /* Set the desired width */
+    height: auto;
+}
 /* Navigation links styling (common for both mobile and desktop) */
 .nav-links {
     display: flex;

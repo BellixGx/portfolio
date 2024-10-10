@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './NavBar.css';
+import logo from './logo.png';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ const NavBar = () => {
                 <a href="#about" className='name'>
                     <h1 className="logo">
                         {/* <span className="material-icons">cloud</span> */}
-                        Bēllix
+                        <img className="logo" src={logo} alt="logo" />
                     </h1>
                 </a>
                 <div className="menu-icon" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
