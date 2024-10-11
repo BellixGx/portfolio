@@ -203,7 +203,7 @@ const skillss = [
   const [visibleCount, setVisibleCount] = useState(6); // Initial number of visible projects
 
   const handleShowMore = () => {
-    setVisibleCount((prevCount) => prevCount + (filteredRepos.length - prevCount )); // Show 3 more projects on each click
+    setVisibleCount((prevCount) => prevCount + (filteredRepos.length - prevCount )); 
   };
 
   const handleHide = () => {
@@ -254,7 +254,7 @@ const skillss = [
     };
 
     if (formIsValid) {
-      // Perform submission logic, e.g., sending email or saving data
+      
       // alert("Form submitted successfully!");
       fetch('http://127.0.0.1:5000/api/sendMessage', {
         method: 'POST',
@@ -271,14 +271,14 @@ const skillss = [
         })
         .then((data) => {
           console.log('Success:', data); 
-          // Optionally reset form fields
+         
           setName('');
           setEmail('');
           setSubject('');
           setMessage('');
         })
         .catch((error) => {
-          console.error('Error:', error); // Handle error
+          console.error('Error:', error); 
         });
 
     }
@@ -329,7 +329,7 @@ const skillss = [
                     <path d="M361.4,394.74H150.6a5.38,5.38,0,0,0,0,10.76H361.4a5.38,5.38,0,0,0,0-10.76Z"/>
                   </svg>
                   <span className="text">
-                    <a href="https://drive.google.com/file/d/1HVb2Q-KVxpzy9bsv7uzvAvEwTiTLJ5pP/view?usp=drive_link" target="_blank" rel="noopener noreferrer" >resume</a>
+                    <a href="https://drive.google.com/file/d/1TRKetitR9IlvTRzY_aMtvXbhLCw8Q7pq/view?usp=drive_link" target="_blank" rel="noopener noreferrer" >resume</a>
                   </span>
                 </p>
               </div>
