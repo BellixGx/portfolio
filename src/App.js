@@ -329,7 +329,9 @@ const skillss = [
                     <path d="M361.4,394.74H150.6a5.38,5.38,0,0,0,0,10.76H361.4a5.38,5.38,0,0,0,0-10.76Z"/>
                   </svg>
                   <span className="text">
-                    <a href="https://drive.google.com/file/d/1TRKetitR9IlvTRzY_aMtvXbhLCw8Q7pq/view?usp=drive_link" target="_blank" rel="noopener noreferrer" >resume</a>
+                    <a href="https://drive.google.com/file/d/1yW5DujAnhHq6YXp99offCthECOv0Q-Pv/view?usp=drive_link" target="_blank" rel="noopener noreferrer" >
+                      resume
+                    </a>
                   </span>
                 </p>
               </div>
