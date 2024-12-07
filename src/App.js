@@ -336,7 +336,7 @@ const skillss = [
                 </p>
               </div>
                 <p className="bio">
-                Motivated and detail-oriented Junior Data Scientist with a strong foundation in data analysis, machine learning, and statistical modeling. Eager to apply theoretical knowledge to real-world problems and develop efficient, 
+                Motivated and detail-oriented Junior Data Scientist/Data Analyst with a strong foundation in data analysis, machine learning, deep learning and statistical modeling. Eager to apply theoretical knowledge to real-world problems and develop efficient, 
                 data-driven solutions. Holds a Master's degree in Mobiquity & BigData from FST Tangier.
                 </p>
                 <button className="contact-button" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>Get In Touch</button>
